@@ -11,7 +11,12 @@ const init = () => {
   const errorMsg = document.getElementById("errormsg");
   const api = new URL("http://localhost:8080");
 
-  console.log(inputEmail, inputPassword, submitButton, errorDiv, errorMsg);
+  var ck = Cookies.get("login")
+  if(!ck){
+    window.location.href = "../../../seleção de login/html.html";
+  }
+  var cookie = JSON.parse(ck);
+
 
   if (submitButton) {
     submitButton.addEventListener("click", (event) => {

@@ -6,7 +6,7 @@
   .site-header {
     position: absolute;
     display: flex;
-    background-color: #111D4A;
+    background-color: #021b30;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #111D4A;
+    background-color: #021b30;
     border-radius: 60px;
     box-sizing: border-box;
     padding: 20px;

@@ -5,10 +5,14 @@ const init = () => {
   const submitButton = document.getElementById("confirmar");
   const msgDiv = document.getElementById("msg");
   const api = new URL("http://localhost:8080");
-  var cookie = JSON.parse(Cookies.get("login"))
   var url_string = window.location.href;
   var url = new URL(url_string);
   var curso = url.searchParams.get("curso")
+  var ck = Cookies.get("login")
+  if(!ck){
+    window.location.href = "../seleção de login/html.html";
+  }
+  var cookie = JSON.parse(ck);
 
   if (submitButton) {
     submitButton.addEventListener("click", (event) => {
@@ -34,5 +38,9 @@ const init = () => {
     });
   }
 };
+
+function retornar(){
+  history.back()
+}
 
 window.onload = init;

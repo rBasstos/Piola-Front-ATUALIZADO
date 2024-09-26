@@ -22,7 +22,12 @@ const init = () => {
   const matricula = parseInt(urlParams.get("m"));
   const api = new URL("http://localhost:8080");
 
-  
+  var ck = Cookies.get("login")
+  if(!ck){
+    window.location.href = "../../seleção de login/html.html";
+  }
+  var cookie = JSON.parse(ck);
+
   let lista;
   const xhr = new XMLHttpRequest();
   xhr.open("GET", api + "Aluno", false);

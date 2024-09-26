@@ -6,10 +6,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stylesdados.css">
+    <link rel="stylesheet" href="./css/stylesdados.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <script src="slide.js" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@300&display=swap" rel="stylesheet">
@@ -20,22 +21,20 @@
   <header id="cabeçalho">
     <nav>
       <ul id="menu">
-      
-        <li class="ajuda"><p>Dúvidas </p></li>
-        <img src="./imagens/logop.jpg" class="logo">
-      
-      </ul>
-      <button id="retornar">
         <a href="#" onclick="retorna()">
-        <i class="fa-solid fa-arrow-left-long fa-lg"></i> </a>
-      </button>
+            <i class="fa-solid fa-arrow-left-long fa-lg"></i> </a>
+        <li class="ajuda"><p>Dúvidas</p></li>
+        <img src="./imagens/logop.jpg" class="logo">
+        <button id="retornar">
+        
+          </button>
+      </ul>
+    
     </nav>
   </header>
 
   <main>
-    <section class="search-container">
-      <input class="input" name="text" placeholder="Search..." type="search" />
-    </section>
+   
 
 
 <table>
@@ -43,7 +42,9 @@
       <tr>
   
           <th>Dúvidas</th>
+          <th>Curso</th>
           <th style="width: 30%;">Email</th>
+          
         
       </tr>
   </thead>

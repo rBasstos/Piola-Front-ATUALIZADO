@@ -4,10 +4,12 @@ const init = () => {
   const nome = document.getElementById("nome");
   const email = document.getElementById("email");
 
-  var cookie = JSON.parse(Cookies.get("login"));
-  if(!cookie){
-  window.location.href = "../seleção de login/html.html";
+  var ck = Cookies.get("login")
+  if(!ck){
+    window.location.href = "../seleção de login/html.html";
   }
+  var cookie = JSON.parse(ck);
+
   //const urlParams = new URLSearchParams(window.location.search);
   const matricula = cookie.matricula;
   const api = new URL("http://localhost:8080");

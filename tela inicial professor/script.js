@@ -5,10 +5,12 @@ const init = () => {
   const curso = document.getElementById("materia");
   const cursos = ["Curso 1 - Java", "Curso 2 - JavaScript", "Curso 3 - HTML e CSS", "Curso 4 - C"];
 
-  var cookie = JSON.parse(Cookies.get("login"));
-  if(!cookie){
-  window.location.href = "../seleção de login/html.html";
+  var ck = Cookies.get("login")
+  if(!ck){
+    window.location.href = "../seleção de login/html.html";
   }
+  var cookie = JSON.parse(ck);
+
   //const urlParams = new URLSearchParams(window.location.search);
   const matricula = cookie.matricula;
   const api = new URL("http://localhost:8080");
